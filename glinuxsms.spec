@@ -59,15 +59,15 @@ install -D -m 644 %{name}-16.png $RPM_BUILD_ROOT%{_miconsdir}/%{name}.png
 # Menu
 # Every entry must be changed according package specfications
 # Pay attention to "section" "command" and "longtitle"
-mkdir -p $RPM_BUILD_ROOT%{_menudir}
-cat > $RPM_BUILD_ROOT%{_menudir}/%{name} << EOF
-?package(%name): \
-command="%{_bindir}/%{name}" \
-needs="X11" \
-icon="%{name}.png" \
-section="Office/Communications/Phone" \
-title="%{title}" \
-longtitle="%{longtitle}"
+mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications/
+cat << EOF > %buildroot%{_datadir}/applications/mandriva-%{name}.desktop
+[Desktop Entry]
+Type=Application
+Exec=%{_bindir}/%{name}
+Icon=%{name}
+Categories=Network;
+Name=%{title}
+Comment=%{longtitle}
 EOF
 
 %post
@@ -83,7 +83,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 %doc COPYING README INSTALL TODO AUTHORS
 %_bindir/*
-%_menudir/%name
+%{_datadir}/applications/mandriva-%name.desktop
 
 %_miconsdir/%name.png
 %_iconsdir/%name.png
