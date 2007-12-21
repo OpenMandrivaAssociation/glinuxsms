@@ -19,6 +19,7 @@ Source0:        %name-%version.tar.bz2
 # Make 3 icons %name-{16,32,48}.png and then tar cjf %name-icons.tar.bz2 *png
 Source1:        %name-icons.tar.bz2
 
+BuildRoot:      %_tmppath/%name-buildroot
 
 Buildrequires: libgnomeui2-devel
 Requires: linuxsms
