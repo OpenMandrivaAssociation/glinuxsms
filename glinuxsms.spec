@@ -2,7 +2,7 @@
 %define name glinuxsms
 
 %define version 0.1
-%define release  %mkrel 2
+%define release  %mkrel 4
 
 %define title   Glinuxsms
 %define longtitle Glinuxsms is a GNOME2 GUI/front-end for linuxsms 
