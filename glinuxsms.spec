@@ -18,7 +18,7 @@ Url:		http://glinuxsms.sourceforge.net/
 Source0:        %name-%version.tar.bz2
 # Make 3 icons %name-{16,32,48}.png and then tar cjf %name-icons.tar.bz2 *png
 Source1:        %name-icons.tar.bz2
-
+Patch0:		glinuxsms-0.1-fix-str-fmt.patch
 BuildRoot:      %_tmppath/%name-buildroot
 
 Buildrequires: libgnomeui2-devel
@@ -43,14 +43,15 @@ Why should you use it?
 %setup -q
 # unpack icons:
 %setup -q -T -D -a1
+%patch0 -p0
 
 %build
-%configure
+%configure2_5x
 %make
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%makeinstall
+%makeinstall_std
 # icon
 mkdir -p $RPM_BUILD_ROOT{%{_liconsdir},%{_iconsdir},%{_miconsdir}}
 install -D -m 644 %{name}-48.png $RPM_BUILD_ROOT%{_liconsdir}/%{name}.png
