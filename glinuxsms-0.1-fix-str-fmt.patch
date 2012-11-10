@@ -1,0 +1,20 @@
+--- src/wndPrefs.c.str	2010-02-19 16:38:52.000000000 +0100
++++ src/wndPrefs.c	2010-02-19 16:39:12.000000000 +0100
+@@ -162,7 +162,7 @@
+   	while ((*p) && ((*p==' ') || (*p=='\n')))
+   		p++;
+   	if ( *p == '#' ) 
+-  		fprintf(fnew,buf2);
++  		fprintf(fnew,"%s",buf2);
+   	else {	
+   		q = strchr(buf2, '=');
+   		if ( q ) {
+@@ -180,7 +180,7 @@
+ 		  		fprintf(fnew, "PROXY=%s\n", AppCfg.def_proxy);
+ 		  	else if ( !strcmp(p, "SIGNATURE") )
+ 		  		fprintf(fnew, "SIGNATURE=%s\n", AppCfg.def_signature);
+-		  	else fprintf(fnew, buf);
++		  	else fprintf(fnew, "%s", buf);
+   		}
+   	}
+   }
