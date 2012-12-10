@@ -95,3 +95,42 @@ rm -rf $RPM_BUILD_ROOT
 %_iconsdir/%name.png
 %_liconsdir/%name.png
 
+
+
+%changelog
+* Sun Dec 05 2010 Oden Eriksson <oeriksson@mandriva.com> 0.1-6mdv2011.0
++ Revision: 610861
+- rebuild
+
+* Fri Feb 19 2010 Funda Wang <fwang@mandriva.org> 0.1-5mdv2010.1
++ Revision: 508343
+- fix str fmt
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - rebuild
+
+* Thu Jul 24 2008 Thierry Vignaud <tv@mandriva.org> 0.1-4mdv2009.0
++ Revision: 246182
+- rebuild
+
+  + Pixel <pixel@mandriva.com>
+    - rpm filetriggers deprecates update_menus/update_scrollkeeper/update_mime_database/update_icon_cache/update_desktop_database/post_install_gconf_schemas
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+* Mon Dec 17 2007 Thierry Vignaud <tv@mandriva.org> 0.1-2mdv2008.1
++ Revision: 131604
+- auto-convert XDG menu entry
+- kill re-definition of %%buildroot on Pixel's request
+- use %%mkrel
+- import glinuxsms
+
+
+* Fri Aug 05 2005 Michael Scherer <misc@mandriva.org> 0.1-2mdk
+- Rebuild
+
+
+* Sun May 16 2004 Michael Scherer <misc@mandrake.org> 0.1-1mdk
+- from Julien Catalano <julien.catalano@free.fr>
+  - Creating RPM for Mandrake Linux.
