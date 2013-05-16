@@ -2,7 +2,7 @@
 %define name glinuxsms
 
 %define version 0.1
-%define release  %mkrel 6
+%define release   7
 
 %define title   Glinuxsms
 %define longtitle Glinuxsms is a GNOME2 GUI/front-end for linuxsms 
@@ -19,7 +19,6 @@ Source0:        %name-%version.tar.bz2
 # Make 3 icons %name-{16,32,48}.png and then tar cjf %name-icons.tar.bz2 *png
 Source1:        %name-icons.tar.bz2
 Patch0:		glinuxsms-0.1-fix-str-fmt.patch
-BuildRoot:      %_tmppath/%name-buildroot
 
 Buildrequires: pkgconfig(libgnomeui-2.0)
 Requires: linuxsms
