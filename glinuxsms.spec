@@ -21,7 +21,7 @@ Source1:        %name-icons.tar.bz2
 Patch0:		glinuxsms-0.1-fix-str-fmt.patch
 BuildRoot:      %_tmppath/%name-buildroot
 
-Buildrequires: libgnomeui2-devel
+Buildrequires: pkgconfig(libgnomeui-2.0)
 Requires: linuxsms
 
 %description
