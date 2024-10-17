@@ -13,7 +13,7 @@ Version:        %version
 Release:        %release
 License:        GPL
 Group:          Communications
-Url:		http://glinuxsms.sourceforge.net/
+Url:		https://glinuxsms.sourceforge.net/
 
 Source0:        %name-%version.tar.bz2
 # Make 3 icons %name-{16,32,48}.png and then tar cjf %name-icons.tar.bz2 *png
