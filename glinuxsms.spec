@@ -20,6 +20,11 @@ Source0:        %name-%version.tar.bz2
 Source1:        %name-icons.tar.bz2
 Patch0:		glinuxsms-0.1-fix-str-fmt.patch
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 Buildrequires: pkgconfig(libgnomeui-2.0)
 Requires: linuxsms
 
